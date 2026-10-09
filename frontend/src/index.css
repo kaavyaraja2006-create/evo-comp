@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --font-sans: "IBM Plex Sans", ui-sans-serif, sans-serif;
+
+  --color-void: #0a0e13;
+  --color-panel: #10151c;
+  --color-panel-raised: #161d26;
+  --color-panel-hover: #1b232e;
+  --color-border: #232c38;
+  --color-border-soft: #1a212b;
+
+  --color-text-primary: #e7ebf1;
+  --color-text-secondary: #94a1b3;
+  --color-text-dim: #5b6779;
+
+  --color-amber: #e2a53d;
+  --color-amber-dim: #6b5326;
+  --color-cyan: #4fc3bd;
+  --color-cyan-dim: #244745;
+  --color-violet: #8b83e0;
+  --color-red: #e5626a;
+  --color-red-dim: #47262a;
+  --color-green: #4caf7d;
+  --color-green-dim: #23402f;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-void);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2a3441 transparent;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #2a3441;
+  border-radius: 4px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-cyan);
+  outline-offset: 1px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
